@@ -1,0 +1,13 @@
+.main{
+    width: 100%;
+    height: auto;
+  
+    background-attachment: fixed;
+    background-image: url('/image/main.gif');
+}
+ @media (max-width: 650px) {
+    .main{
+    width: 100%;
+    }
+  
+ }

@@ -1,0 +1,115 @@
+.welcome-main {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.welcome-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/image/intro1.avif');
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.8);
+    z-index: 0;
+}
+
+
+.intro-heading-1,
+.intro-heading-2,
+.intro-button {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+
+.intro-heading-2 {
+    line-height: 1.4em;
+    color: rgb(255, 255, 255);
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    animation: text 4s 1;
+}
+
+.intro-heading-1 {
+    line-height: 1.4em;
+    color: rgb(232, 225, 225);
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    font-family: cursive;
+    animation: text 4s 1;
+}
+
+
+.intro-button {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    color: #d6cdcd;
+    font-family: cursive;
+    opacity: 0;
+    animation: Text2 2s ease-in 2s forwards;
+    text-decoration: none;
+    z-index: 1;
+}
+
+
+@keyframes text {
+    0% {
+        color: rgb(189, 180, 180);
+        margin-bottom: -40px;
+    }
+
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+
+    85% {
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+@keyframes Text2 {
+
+    0%,
+    30%,
+    85% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .welcome-main::before {
+        background-image: url('/image/intro1.avif');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .intro-heading-2 {
+        letter-spacing: 4px;
+    }
+
+    .intro-heading-1 {
+        letter-spacing: 3px;
+    }
+}
