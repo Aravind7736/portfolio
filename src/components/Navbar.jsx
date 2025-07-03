@@ -40,7 +40,10 @@ const Navbar = () => {
             <li><a className='nav-link' href="#home">Home</a></li>
             <li><a className='nav-link' href="#about">About</a></li>
             <li><a className='nav-link' href="#education">Education</a></li>
-            <li><a className='nav-link' href="#Project">Projects</a></li>
+             <li><a className='nav-link' href="#Project" onClick={(e)=>{
+               e.preventDefault();
+  alert("Sorry! this page is currently unavailable. It will be available later.");
+            }}>Projects</a></li>
             <li><a className='nav-link' href="#contact">Contact</a></li>
         
           
