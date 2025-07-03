@@ -324,7 +324,7 @@
 .wrapper {
   width: 100%;
   
-  min-height: 40vh;
+  min-height: 45vh;
   position: relative;
   text-align: center;
   display: flex;
@@ -395,7 +395,7 @@
     transform: rotateY(calc(360deg / var(--quantity) * var(--index))) translateZ(var(--translateZ));
     transition: transform 0.3s ease, scale 0.3s ease;
     cursor: pointer;
-     box-shadow: 0px 30px 90px rgba(7, 70, 181, 0.5);
+     box-shadow: 0px 30px 90px rgba(0, 44, 120, 0.2);
   }
 
   .card-img {

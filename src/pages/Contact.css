@@ -5,6 +5,7 @@
   align-items: center;
 
   padding-top: 4rem;
+  margin-bottom: 4rem;
 
 }
 
@@ -22,17 +23,17 @@ font-size: 2rem;
 
 }
 .contact-left{
-  height: 100vh;
+  height: auto;
   width: 49%;
 
 
 }
 
 .contact-right{
-  height: 100;
-  width: 50%;
-  align-items: center;
-  justify-items: center;
+    justify-items: center;
+  height: auto;
+  width: 49%;
+
 }
 
 /* From Uiverse.io by javierBarroso */ 
@@ -42,12 +43,12 @@ border-radius: 2rem;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-    background-color: rgba(38, 25, 94, 0.5);
+    background-color: rgba(38, 25, 94, 0.2);
   width: 90%;
-  padding-top: 10rem;
+  padding-top: 5rem;
 margin-left: 2rem;
 margin-top: 2rem;
-height: 50vh;
+height: 45vh;
 
 }
 
@@ -83,10 +84,11 @@ height: 50vh;
   height: 120px;
   outline: none;
   border: none;
-  background: rgb(200, 200, 200);
+ 
   border-radius: 120px 10px 10px 10px;
+   background: #051073;
   box-shadow:
-    inset 2px 2px 2px #fff,
+    inset 2px 2px 2px #5c5aeb,
     inset -2px -2px 2px #4442,
     2px 2px 5px #4442;
   transition: 0.2s ease-in-out;
@@ -98,10 +100,10 @@ height: 50vh;
   height: 120px;
   outline: none;
   border: none;
-    background: rgb(200, 200, 200);
   border-radius: 10px 120px 10px 10px;
+ background: #051073;
   box-shadow:
-    inset 2px 2px 2px #fff,
+    inset 2px 2px 2px #5c5aeb,
     inset -2px -2px 2px #4442,
     2px 2px 5px #4442;
   transition: 0.2s ease-in-out;
@@ -113,11 +115,11 @@ height: 50vh;
   width: 120px;
   height: 120px;
   outline: none;
-  border: none;
-    background: rgb(200, 200, 200);
+  border: none; 
   border-radius: 10px 10px 10px 120px;
+  background: #051073;
   box-shadow:
-    inset 2px 2px 2px #fff,
+    inset 2px 2px 2px #5c5aeb,
     inset -2px -2px 2px #4442,
     2px 2px 5px #4442;
   transition: 0.2s ease-in-out;
@@ -130,10 +132,10 @@ height: 50vh;
   height: 120px;
   outline: none;
   border: none;
-    background: rgb(200, 200, 200);
   border-radius: 10px 10px 120px 10px;
+  background: #051073;
   box-shadow:
-    inset 2px 2px 2px #fff,
+    inset 2px 2px 2px #5c5aeb,
     inset -2px -2px 2px #4442,
     2px 2px 5px #4442;
   transition: 0.2s ease-in-out;
@@ -209,25 +211,29 @@ height: 50vh;
 
 }
 .form-container{
+ 
   width: 80%;
-  height: auto;
-  background: #393434;
+  height: 45vh;
+   background-color: rgba(38, 25, 94, 0.5);
   padding: 2rem;
   border-radius: 2rem;
   margin-bottom: 2rem;
 
+margin-top: 2rem;
+
+
 }
 
 .input-sections{
+ 
 width: 100%;
-  padding: 12px 16px;
+  padding: 15px 0px;
   border-radius: 8px;
-  color: #fff;
+  /* color: #fff; */
   font-family: inherit;
-  background-color: rgb(237, 237, 255);
-  border: 1px solid #414141;
-
-
+  border: 1px solid #9e9d9d;
+  background-color: rgba(40, 36, 36, 0.5);
+ backdrop-filter: blur(1px);
 
 }
 
@@ -240,18 +246,33 @@ width: 100%;
 }
 .text-area{
   width: 100%;
-  padding: 12px 16px;
+  padding: 20px 0px;
   border-radius: 8px;
   resize: none;
   color: #fdfcfc;
   height: 96px;
-  border: 1px solid #414141;
-  background-color: transparent;
   font-family: inherit;
+   border: 1px solid #9e9d9d;
+  background-color: rgba(40, 36, 36, 0.5);
+ backdrop-filter: blur(1px);
+
 }
 
-
-
+.contact-button{
+  
+  width: 100%;
+  height: 2.5rem;
+  border-radius: .7rem;
+   border: 1px solid #9e9d9d;
+  background-color: rgb(0, 175, 26);
+ backdrop-filter: blur(1px);
+}
+.button-div{
+  
+width: 100%;
+height: auto;
+text-align: center;
+}
 
 
 @media (max-width:768px){
@@ -281,10 +302,14 @@ padding-top: 0;
 
 }
 .contact-right{
+ 
+  justify-items: center;
   height: 50%;
   width: 100%;
   /* background: #00ff59; */
 }
+
+
 .info-contact{
 border-radius: 3rem;
  align-items: center;
@@ -315,6 +340,7 @@ height: auto;
 width: 100%;
 height: 3rem;
 border-radius: .7rem;
+padding-left: 1rem;
 
 
 }

@@ -2,6 +2,8 @@ import React from 'react'
 import './Contact.css';
 
 import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import {  FaGithub, FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { useRef } from 'react';
@@ -12,11 +14,11 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_7736', 'template_a30cq0m', form.current, 'OCUlaQVsHtj-jwX8T')
+    emailjs.sendForm('service_smrv08d', 'template_agwk3gi', form.current, '2zKWCrDvmUImvljaL')
       .then((result) => {
-        alert('Message sent!');
+      toast.success('Thank you for contacting!');
       }, (error) => {
-        alert('Failed to send message.');
+        toast.error('Failed to send message.');
         console.error(error);
       });
   };
@@ -63,19 +65,22 @@ const Contact = () => {
 
 
         <div className='contact-right'>
-          <div className='form-container'>
+          <div className='form-container  animate-on-scroll'>
             <form className='form' ref={form} onSubmit={sendEmail}>
               <div className='input'>
-              <input className='input-sections' type="text" name="name" placeholder="Your Name" required />
+              <input className='input-sections  animate-on-scroll' type="text" name="name" placeholder="Your Name" required />
               </div>
               <div  className='input'>
-              <input  className='input-sections' type="email" name="email" placeholder="Your Email" required />
+              <input  className='input-sections  animate-on-scroll' type="email" name="email" placeholder="Your Email" required />
               </div>
               <div >
-              <textarea className='text-area' name="message" placeholder="Your Message" required />
+              <textarea className='text-area animate-on-scroll' name="message" placeholder="Your Message" required />
               </div>
-              <button type="submit">Send</button>
+              <div className='button-div'>
+              <button className='contact-button' type="submit">Send</button>
+              </div>
             </form>
+            <ToastContainer />
           </div>
         </div>
     </section>

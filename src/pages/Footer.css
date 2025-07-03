@@ -1,5 +1,55 @@
 .footer{
     width: 100%;
-    height: 200px;
-    background: #d5cccc;
+    height: 100px;
+   background-color: rgba(175, 142, 142, 0.1);
+  color: #ccc;
+  padding: 1rem;
+  text-align: center;
+
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  list-style: none;
+  padding: 0;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+
+}
+
+.footer-icons a {
+  margin: 0 2rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+  
+
+}
+
+.footer-icons a:hover {
+  color: #00bcd4;
+}
+.footer-link{
+text-decoration: none;
+}
+@media (max-width:768px){
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  list-style: none;
+  padding: 0;
+padding-top: .2rem;
+  padding-bottom: .1rem;
+}
+.footer-icons a {
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+    
+}
 }

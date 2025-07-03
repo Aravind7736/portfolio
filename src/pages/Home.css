@@ -169,7 +169,15 @@ html, body {
   
   }
  
-
+.home-heading-1:hover {
+  font-size: 1.5em;
+  transition: ease-in-out .3s;
+}
+.home-heading-2:hover {
+ 
+  font-size: 1.5em;
+  transition: ease-in-out .3s;
+}
 
   .left-section,
   .right-section {
@@ -181,21 +189,24 @@ html, body {
   }
 
   .home-heading,
-  .home-heading-1,
+  .home-heading-1{
+     font-size: 1.5em;
+    line-height: 1.2;
+  }
   .home-heading-2 {
     font-size: 1.5em;
     line-height: 1.2;
+    color: #8b8799;
+
   }
 
 .home-heading-1:active{
   color: #ffffff;
-  font-size: 1.7em;
-  transition: ease-in-out .3s;
+
 }
 .home-heading-2:active {
   color: #ffffff;
-  font-size: 1.6em;
-  transition: ease-in-out .3s;
+ 
 }
 
   .image {

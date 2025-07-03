@@ -1,5 +1,6 @@
 import React from 'react'
 import './Welcome.css'
+import Main from './Main'
 const Welcome = () => {
   return (
     <div className='welcome-main'>
@@ -8,6 +9,8 @@ const Welcome = () => {
 
 
       <a className='intro-button' href="Main">Click Me.</a>
+
+  
 
 
 
