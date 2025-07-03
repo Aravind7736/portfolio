@@ -50,10 +50,9 @@ const Education = () => {
             </ul>
           </div>
           <div class="edu-footer">
-            <button onClick={() => handleViewPDF("/Certificate/S.S.L.C.pdf")} className='slice'>
+            <button onClick={() => handleViewPDF("/Certificate/+2.pdf")} className='slice'>
               <span className="text"> View Certificate</span>
             </button>
-
           </div>
         </div>
 
