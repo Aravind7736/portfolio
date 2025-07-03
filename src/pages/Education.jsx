@@ -2,8 +2,8 @@ import React from 'react'
 import './Education.css'
 const Education = () => {
   const handleViewPDF = (filePath) => {
-    window.open(filePath, "_blank");
-  };
+  window.open(`/pdf-viewer.html?file=${encodeURIComponent(filePath)}`, "_blank");
+};
 
 
   return (
@@ -29,8 +29,8 @@ const Education = () => {
           </div>
           <div class="edu-footer">
             <button onClick={() => handleViewPDF("/Certificate/S.S.L.C.pdf")} className='slice'>
-              <span className="text"> View Certificate</span>
-            </button>
+  <span className="text"> View Certificate</span>
+</button>
 
           </div>
         </div>
@@ -51,8 +51,9 @@ const Education = () => {
           </div>
           <div class="edu-footer">
             <button onClick={() => handleViewPDF("/Certificate/+2.pdf")} className='slice'>
-              <span className="text"> View Certificate</span>
-            </button>
+  <span className="text"> View Certificate</span>
+</button>
+
           </div>
         </div>
 
@@ -72,9 +73,11 @@ const Education = () => {
             </ul>
           </div>
           <div class="edu-footer">
+            
             <button onClick={() => handleViewPDF("/Certificate/diploma mark list.pdf")} className='slice'>
-              <span className="text"> View Certificate</span>
-            </button>
+  <span className="text"> View Certificate</span>
+</button>
+
           </div>
         </div>
 
