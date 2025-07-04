@@ -1,9 +1,19 @@
-import React from 'react'
+// import React from 'react'
+import React, { useState } from 'react';
+
 import './Education.css'
+import CertificateModal from '../components/CertificateModal';
+
 const Education = () => {
-  const handleViewPDF = (filePath) => {
-  window.open(`/pdf-viewer.html?file=${encodeURIComponent(filePath)}`, "_blank");
-};
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCert, setSelectedCert] = useState("");
+
+  const handleViewCertificate = (path) => {
+    setSelectedCert(path);
+    setIsModalOpen(true);
+  };
+
+
 
 
   return (
@@ -28,9 +38,10 @@ const Education = () => {
             </ul>
           </div>
           <div class="edu-footer">
-            <button onClick={() => handleViewPDF("/Certificate/S.S.L.C.pdf")} className='slice'>
-  <span className="text"> View Certificate</span>
-</button>
+
+            <button onClick={() => handleViewCertificate("/Certificate/SSLC.pdf")} className='slice'>
+              <span className="text"> View Certificate</span>
+            </button>
 
           </div>
         </div>
@@ -50,9 +61,10 @@ const Education = () => {
             </ul>
           </div>
           <div class="edu-footer">
-            <button onClick={() => handleViewPDF("/Certificate/+2.pdf")} className='slice'>
-  <span className="text"> View Certificate</span>
-</button>
+
+            <button onClick={() => handleViewCertificate("/Certificate/+2.pdf")} className='slice'>
+              <span className="text"> View Certificate</span>
+            </button>
 
           </div>
         </div>
@@ -73,15 +85,16 @@ const Education = () => {
             </ul>
           </div>
           <div class="edu-footer">
-            
-            <button onClick={() => handleViewPDF("/Certificate/diploma mark list.pdf")} className='slice'>
-  <span className="text"> View Certificate</span>
-</button>
 
+            <button onClick={() => handleViewCertificate("/Certificate/diploma mark list.pdf")} className='slice'>
+              <span className="text"> View Certificate</span>
+            </button>
           </div>
         </div>
 
       </div>
+
+
       {/* other certificate section */}
       <div className='other-container'>
         <div className='other-certificate animate-on-scroll'>
@@ -90,12 +103,12 @@ const Education = () => {
           </header>
           <div class="wrapper animate-on-scroll">
             <div className="inner " style={{ '--quantity': 3 }}>
-              <div className="card" style={{ '--index': 0 }}
+              {/* <div className="card" style={{ '--index': 0 }}
                 onClick={() => window.open('/Certificate/SSLC.pdf', '_blank')} >
                 <div className="img">
                   sslc
                 </div>
-              </div>
+              </div> */}
 
               <div className="card " style={{ '--index': 1 }}
                 onClick={() => window.open('/image/nss.jpg', '_blank')} >
@@ -122,13 +135,18 @@ const Education = () => {
             </div>
           </div>
         </div>
+        <CertificateModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          certSrc={selectedCert}
+        />
 
+        
+{/* skill-section */}
         <div className='skills'>
-
           <header className='edu-head-2'>
             Skills
           </header>
-
           <div class="skill-container animate-on-scroll">
             <div class="skill-box">
               <span class="title">HTML</span>
@@ -180,6 +198,7 @@ const Education = () => {
 
         </div>
       </div>
+
     </div>
   )
 }
