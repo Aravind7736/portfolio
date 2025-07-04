@@ -131,7 +131,7 @@ const Education = () => {
               </div>
 
               <div className="card" style={{ '--index': 3 }}
-                onClick={() => window.open('/Certificate/Internship.pdf', '_blank')}>
+                onClick={() => window.open('/Certificate/intern.png', '_blank')}>
                 <div className="img">
                   <img className='card-img' src="/image/internship.jpg" alt="" width='120px ' height='180px' />
                 </div>
