@@ -93,7 +93,11 @@ const Education = () => {
         </div>
 
       </div>
-
+  <CertificateModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          certSrc={selectedCert}
+        />
 
       {/* other certificate section */}
       <div className='other-container'>
@@ -135,11 +139,7 @@ const Education = () => {
             </div>
           </div>
         </div>
-        <CertificateModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          certSrc={selectedCert}
-        />
+      
 
         
 {/* skill-section */}
