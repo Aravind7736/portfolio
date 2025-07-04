@@ -39,7 +39,7 @@ const Education = () => {
           </div>
           <div class="edu-footer">
 
-            <button onClick={() => handleViewCertificate("/Certificate/S.S.L.C.pdf")} className='slice'>
+            <button onClick={() => handleViewCertificate("/Certificate/SSLC.pdf")} className='slice'>
               <span className="text"> View Certificate</span>
             </button>
 
@@ -62,7 +62,7 @@ const Education = () => {
           </div>
           <div class="edu-footer">
 
-            <button onClick={() => handleViewCertificate("/Certificate/+2.pdf")} className='slice'>
+            <button onClick={() => handleViewCertificate("/Certificate/plustwo.pdf")} className='slice'>
               <span className="text"> View Certificate</span>
             </button>
 
@@ -93,7 +93,7 @@ const Education = () => {
         </div>
 
       </div>
-  <CertificateModal
+ <CertificateModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
           certSrc={selectedCert}
@@ -139,7 +139,7 @@ const Education = () => {
             </div>
           </div>
         </div>
-      
+       
 
         
 {/* skill-section */}

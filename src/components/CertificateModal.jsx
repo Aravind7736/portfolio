@@ -8,13 +8,14 @@ const CertificateModal = ({ isOpen, onClose, certSrc }) => {
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="close-btn" onClick={onClose}>×</button>
-    
-       < iframe
-  src={`https://docs.google.com/gview?url=${window.location.origin + certSrc}&embedded=true`}
-  width="100%"
-  height="500px"
-  frameBorder="0"
-/>
+        <iframe
+          src={certSrc}
+          title="Certificate"
+          width="100%"
+          height="500px"
+          frameBorder="0"
+          
+        />
       </div>
     </div>
   );
