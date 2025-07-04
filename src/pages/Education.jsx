@@ -39,7 +39,7 @@ const Education = () => {
           </div>
           <div class="edu-footer">
 
-            <button onClick={() => handleViewCertificate("/Certificate/SSLC.pdf")} className='slice'>
+            <button onClick={() => handleViewCertificate("/Certificate/S.S.L.C.pdf")} className='slice'>
               <span className="text"> View Certificate</span>
             </button>
 
