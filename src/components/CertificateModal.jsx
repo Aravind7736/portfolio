@@ -16,7 +16,7 @@ const CertificateModal = ({ isOpen, onClose, certSrc }) => {
   width="100%"
   height="500px"
   frameBorder="0"
-/>
+
 
           
         />
